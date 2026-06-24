@@ -8,25 +8,6 @@
 >
 </script>
 
-(function () {
-  var params  = new URLSearchParams(window.location.search);
-  var valor   = parseFloat(params.get('valor')) || 37.00;   // ticket fixo: 37 USD
-  var orderId = params.get('order') || ('order_' + Date.now());
-  var email   = params.get('email') || '';
-  var phone   = params.get('phone') || '';
-
-  if (params.get('order')) {
-    ttq.ready(function () {
-      if (email || phone) ttq.identify({ email: email, phone_number: phone });
-      ttq.track('CompletePayment', {
-        contents: [{ content_id: 'PROD_001', content_type: 'product', content_name: 'NOME_DO_PRODUTO' }],
-        value: 37.00,
-        currency: 'USD'
-      }, { event_id: orderId });
-    });
-  }
-})();
-</script>
 
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
