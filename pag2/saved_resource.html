@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)https://player-vz-2421c5b9-d6c.tv.pandavideo.com.br/embed/?v=9d6c1693-30cd-45e1-b9d7-436ecd67b8b1 -->
+<html style="--plyr-color-main: #FF0000; --plyr-captions-text-color: #FFFFFF; --plyr-captions-background: #000000; --plyr-video-control-color: #FFFFFF; --plyr-video-control-color-hover: #FFFFFF; --plyr-menu-color: #4a5464; --live-indicator-color: #fc2d2d; --background-size: cover;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><link rel="stylesheet" href="./css"><script src="./cast_sender.js.download"></script><script src="./cast_framework.js.download"></script><script src="chrome-extension://pkedcjkdefgpdelpbcmbmeomcjbeemfm/cast_sender.js"></script><meta name="robots" content="noindex"><link rel="stylesheet" href="./plyr.css"><link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./pb.css"><title>Panda Video - Hospedagem de video</title><script src="chrome-extension://enhhojjnijigcajfphajepfemndkmdlo/cast_sender.js"></script><style><br>        .plyr__captions {<br>            font-size: 14px;<br>        }<br><br>        @media (max-width: 460px) {<br>            .plyr__captions {<br>                font-size: 14px;<br>            }<br>        }<br><br>        @media (min-width: 461px) {<br>            .plyr__captions {<br>                font-size: 19.599999999999998px;<br>            }<br>        }<br><br>        @media (min-width: 768px) {<br>            .plyr__captions {<br>                font-size: 28px;<br>            }<br>        }<br><br>        @media (min-width: 1024px) {<br>            .plyr:-webkit-full-screen .plyr__captions, .plyr:fullscreen .plyr__captions, .plyr__captions {<br>                font-size: 33.6px;<br>            }<br>        }<br>    </style></head><body id="body" class=""><div class="panda-cover-thumbnail panda-cover-thumbnail__img" style="background-color: rgb(0, 0, 0);"><img src="./cover.jpg" id="cover-thumbnail" style="display: none;"></div><script>document.addEventListener('DOMContentLoaded', function () {
+                function validateDomainThumb(host) {
+                    const [pullzone_id] = host.match(/(vz-[a-z0-9]{8}-[a-z0-9]{3})/) || [];
+                    if (pullzone_id) {
+                        if (host.match(/vunel/)) {
+                            IS_VUNEL = true;
+                        }
+                        return pullzone_id;
+                    }
+                    return null
+                }
+                
+                const url = new URL(window.location.href);
+                let THUMB_VIDEO_ID = url.searchParams.get('v');
+                let THUMB_LIBRARY_ID = url.searchParams.get('l');
+                const libraryCheck = validateDomainThumb(url.host);
+                if (libraryCheck) THUMB_LIBRARY_ID = libraryCheck;
+                
+                if (!THUMB_VIDEO_ID || !THUMB_LIBRARY_ID) {
+                    return;
+                }
+                const coverUrl = `https://thumbs.tv.pandavideo.com.br/${THUMB_LIBRARY_ID}/${THUMB_VIDEO_ID}/cover.jpg`;
+                
+                const imgContainer = document.createElement('div');
+                imgContainer.alt = 'Thumbnail';
+                imgContainer.className = 'panda-cover-thumbnail panda-cover-thumbnail__img';
+                const img = new Image();
+                img.src = coverUrl;
+                img.id = 'cover-thumbnail';
+                
+                document.body.classList.add('has-cover');
+                document.body.insertAdjacentElement('afterbegin', imgContainer);
+                
+                img.onload = () => {
+                    imgContainer.appendChild(img);
+                    imgContainer.style.backgroundColor = '#000'
+                };
+                
+                img.onerror = () => {
+                    imgContainer.style.backgroundColor = '#000'
+                }
+                
+                img.onabort = () => {
+                    imgContainer.style.backgroundColor = '#000'
+                }
+            });</script><script src="./vendors.755.bundle.js.download"></script><script src="./main.755.bundle.js.download"></script>
+        <div class="container " id="video-container" style="margin-top: 0px !important;">
+            
+            <!-- Loading indicator -->
+            <div tabindex="0" class="plyr plyr--full-ui plyr--video plyr--html5 plyr--fullscreen-enabled plyr--pip-supported plyr--is-touch plyr__poster-enabled plyr--paused"><div id="hot-keys-dialog" class=" disabled">
+           <div id="hot-keys-dialog-content">
+               <header>
+                   <p class="hot-keys-title">Ver atalhos de teclado</p>
+                   <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.4713 4.97141C12.7317 4.71107 12.7317 4.28896 12.4713 4.02861C12.211 3.76826 11.7889 3.76826 11.5285 4.02861L7.99992 7.5572L4.47132 4.02861C4.21097 3.76826 3.78886 3.76826 3.52851 4.02861C3.26816 4.28896 3.26816 4.71107 3.52851 4.97141L7.05711 8.50001L3.52851 12.0286C3.26816 12.289 3.26816 12.7111 3.52851 12.9714C3.78886 13.2318 4.21097 13.2318 4.47132 12.9714L7.99992 9.44282L11.5285 12.9714C11.7889 13.2318 12.211 13.2318 12.4713 12.9714C12.7317 12.7111 12.7317 12.289 12.4713 12.0286L8.94273 8.50001L12.4713 4.97141Z" fill="white"></path>
+</svg></button>
+               </header>
+               <ul>
+                   <li>
+                       <p>Reproduzir/Pausar</p>
+                       <p>Espaço ou K</p>
+                   </li>
+                   <li>
+                       <p>Aumentar volume</p>
+                       <p>Seta para cima</p>
+                   </li>
+                   <li>
+                       <p>Diminuir volume</p>
+                       <p>Seta para baixo</p>
+                   </li>
+                   <li>
+                       <p>Avançar</p>
+                       <p>Seta para a direita</p>
+                   </li>
+                   <li>
+                       <p>Retroceder</p>
+                       <p>Seta para a esquerda</p>
+                   </li>
+                   <li>
+                       <p>Aumentar velocidade</p>
+                       <p>Shift + .</p>
+                   </li>
+                   <li>
+                       <p>Diminuir velocidade</p>
+                       <p>Shift + ,</p>
+                   </li>
+               </ul>
+           </div>
+       </div><div id="report-problem-dialog" class=" disabled"><div id="copy-paste"><header> <p class="report-problem-text">Reportar erro</p></header> <div id="report-first-step"> <section id="radio-section"> <div> <input type="radio" id="report-not-loading" name="issue-reported" value="report-not-loading" checked=""> <label for="report-not-loading">O vídeo não carrega, mesmo com boa conexão de internet.</label><br></div><div> <input type="radio" id="report-unmatch-description" name="issue-reported" value="report-unmatch-description"> <label for="report-unmatch-description">O conteúdo do vídeo não corresponde com a descrição.</label> </div><div> <input type="radio" id="report-low-quality" name="issue-reported" value="report-low-quality"> <label for="report-low-quality">O vídeo está em baixa qualidade ou pixelado.</label> </div><div> <input type="radio" id="report-other" name="issue-reported" value="report-other"> <label for="report-other">Outro</label><br></div><div class="report-textfield-card"> <div id="other-input-wrapper" class="disabled"> <input class="other-input" type="text" id="other-input" name="other" placeholder="Descreva seu problema..."> </div></div></section> <footer> <button id="report-second-step-btn" class="report-problem-dialog-button">Enviar</button> <button id="report-close-dialog-btn" class="report-problem-dialog-button">Cancelar</button> </footer> </div><div id="report-second-step" class="disabled"> <div id="loading-div"> <svg viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve"> <path fill="#4874F1" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"> <animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animatetransform> </path> </svg> </div><p id="second-step-text">Aguarde um momento, seu feedback <br> está sendo enviado.</p></div><div id="report-third-step" class="disabled alone"> <header>  </header> <p class="report-problem-text">Obrigado por nos ajudar a melhorar!</p><footer> <button id="report-ok-btn" class="report-problem-dialog-button">OK</button> </footer> </div></div></div><div class="plyr__controls no-progress"><div class="plyr__controls__item plyr__time--current plyr__time" aria-label="Tempo atual" style="display: none;">00:00</div><div class="plyr__controls__item plyr__controls__spacer" style="flex: 1 1 0%;"></div></div><div class="plyr__video-wrapper plyr__video-wrapper--not-ready"><video crossorigin="" preload="auto" playsinline="" poster="https://cdn.pandavideo.com/vz-2421c5b9-d6c/9d6c1693-30cd-45e1-b9d7-436ecd67b8b1/thumbnail.jpg" data-poster="https://cdn.pandavideo.com/vz-2421c5b9-d6c/9d6c1693-30cd-45e1-b9d7-436ecd67b8b1/thumbnail.jpg" src="https://b-vz-2421c5b9-d6c.tv.pandavideo.com.br/9d6c1693-30cd-45e1-b9d7-436ecd67b8b1/playlist.m3u8" style="visibility: visible; object-fit: fill;"><source type="application/x-mpegURL" src="https://b-vz-2421c5b9-d6c.tv.pandavideo.com.br/9d6c1693-30cd-45e1-b9d7-436ecd67b8b1/playlist.m3u8"></video><div class="plyr__poster  disabled" style="background-image: url(&quot;https://cdn.pandavideo.com/vz-2421c5b9-d6c/9d6c1693-30cd-45e1-b9d7-436ecd67b8b1/thumbnail.jpg&quot;); background-size: cover !important;"></div><div class="plyr__preview-scrubbing"></div></div><div class="plyr__captions" dir="auto"></div></div><div id="error-indicator" class="disabled">
+            </div>
+            <div class="loading-icon disabled">
+                <svg x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                    <path fill="#9e9e9e" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+                        <animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animatetransform>
+                    </path>
+                </svg>
+            </div>
+            
+            <!-- Live -->
+            <div class="live-offline-badge disabled">
+
+                <div id="live-title-text">Waiting for the Live to start...</div>
+                <div class="live-subtitle-text">Aguardando inicio da Live...</div>
+                <div class="live-subtitle-text">Esperando el inicio del Live...</div>
+            </div>
+            <div class="live-thumb disabled">
+                <img src="./saved_resource" alt="Live Offline">
+            </div>
+        </div>
+    </body></html>
